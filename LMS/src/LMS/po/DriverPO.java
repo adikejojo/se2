@@ -1,8 +1,6 @@
 package LMS.po;
 
-import java.io.Serializable;
-
-public class DriverPO implements Serializable{
+public class DriverPO extends ConfigurationPO{
 
 	/**
 	 * 

@@ -1,8 +1,6 @@
 package LMS.po;
 
-import java.io.Serializable;
-
-public class supercargoPO implements Serializable{
+public class supercargoPO extends ConfigurationPO{
 
 	/**
 	 * 

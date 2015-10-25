@@ -1,8 +1,6 @@
 package LMS.po;
 
-import java.io.Serializable;
-
-public class VehiclePO implements Serializable{
+public class VehiclePO extends ConfigurationPO{
 
 	/**
 	 * 
