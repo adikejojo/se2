@@ -28,7 +28,7 @@ public class ReceiptPOServiceImpl implements ReceiptPOService{
 				BufferedWriter bw= new BufferedWriter(new FileWriter("/LMS/Data/SendReceipt/txt"));
 				bw.write(srPO.getOrder_barcode_number()+";"+srPO.getPacking_expense()
 						+";"+srPO.getToral_price()+";"+srPO.getExpress_type()+";"
-						+srPO.getReceiver().getName()+";"+";"+srPO.getSender().getName());
+						+srPO.getReceiver().getName()+";"+srPO.getSender().getName());
 				bw.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
