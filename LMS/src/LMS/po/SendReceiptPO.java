@@ -1,5 +1,7 @@
 package LMS.po;
 
+import LMS.presentation.expressType;
+
 public class SendReceiptPO extends ReceiptPO{
 	
 	/**
@@ -7,22 +9,22 @@ public class SendReceiptPO extends ReceiptPO{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	String order_barcode_number;
+	String ID;
 	
 	senderPO sender;
 	receiverPO receiver;
 	
-	int express_type;
+	expressType express_type;
 	double packing_expense;
 	double toral_price;
 	
 	
 	
-	public SendReceiptPO(String order_barcode_number, senderPO sender,
-			receiverPO receiver, int express_type, double packing_expense,
+	public SendReceiptPO(String ID, senderPO sender,
+			receiverPO receiver, expressType express_type, double packing_expense,
 			double toral_price) {
 		super();
-		this.order_barcode_number = order_barcode_number;
+		this.ID = ID;
 		this.sender = sender;
 		this.receiver = receiver;
 		this.express_type = express_type;
@@ -33,7 +35,7 @@ public class SendReceiptPO extends ReceiptPO{
 
 
 	public String getOrder_barcode_number() {
-		return order_barcode_number;
+		return ID;
 	}
 
 
@@ -50,7 +52,7 @@ public class SendReceiptPO extends ReceiptPO{
 
 
 
-	public int getExpress_type() {
+	public expressType getExpress_type() {
 		return express_type;
 	}
 

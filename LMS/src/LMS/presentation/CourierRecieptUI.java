@@ -16,7 +16,9 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
 
+import LMS.businesslogicservice.SendReceiptService;
 import LMS.bussinesslogic.SendReceipt;
+import LMS.presentation.expressType;
 
 
 
@@ -38,6 +40,7 @@ public class CourierRecieptUI extends JPanel implements ActionListener,ItemListe
 	private JTextField text_packFee;
 	JButton btn_commitS = new JButton("\u63D0\u4EA4");
 	private static final long serialVersionUID = 1L;
+	SendReceiptService sr=new SendReceipt();
 	public CourierRecieptUI() {
 		initialize();
 	}
@@ -224,7 +227,10 @@ public class CourierRecieptUI extends JPanel implements ActionListener,ItemListe
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()==btn_commitS){
-			System.out.println(text_nameS.getText());
+			sr.submitSendReceipt(text_nameS.getText(), text_phoneS.getText(), 
+					text_addressS.getText(), text_nameR.getText(), text_phoneR.getText(), 
+					text_addressR.getText(), Double.parseDouble(text_weight.getText()), Double.parseDouble(text_volume.getText()),
+					text_content.getText(), expressType.EXPRESS, Double.parseDouble(text_packFee.getText()));
 		}
 	}
 

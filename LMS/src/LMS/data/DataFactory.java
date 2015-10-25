@@ -18,7 +18,7 @@ public class DataFactory {
 		UserPOService data=new UserPOServiceImpl(type);
 		return data;
 	}
-	public ReceiptPOService getReceiptDatabase (int type)throws RemoteException{
+	public ReceiptPOService getReceiptDatabase (DataType type)throws RemoteException{
 		ReceiptPOService data=new ReceiptPOServiceImpl(type);
 		return data;
 	}
