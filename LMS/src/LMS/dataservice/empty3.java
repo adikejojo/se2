@@ -1,4 +1,4 @@
-package LMS.bl.Receipt;
+package LMS.dataservice;
 
 public class empty3 {
 

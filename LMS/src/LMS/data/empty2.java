@@ -1,4 +1,4 @@
-package LMS.bl.Finance;
+package LMS.data;
 
 public class empty2 {
 
