@@ -65,7 +65,7 @@ public class CourierRecieptUI extends JPanel implements ActionListener,ItemListe
 		System.out.println(choice_operation.getSelectedItem());
 		frame.getContentPane().add(choice_operation);
 		
-		Label label = new Label("\u64CD\u4F5C");
+		Label label = new Label("\u64CD\u4F5C");//操作标签
 		label.setBounds(10, 8, 69, 23);
 		frame.getContentPane().add(label);
 		
@@ -226,7 +226,7 @@ public class CourierRecieptUI extends JPanel implements ActionListener,ItemListe
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if(e.getSource()==btn_commitS){
+		if(e.getSource()==btn_commitS){//默认值
 			sr.submitSendReceipt(text_nameS.getText(), text_phoneS.getText(), 
 					text_addressS.getText(), text_nameR.getText(), text_phoneR.getText(), 
 					text_addressR.getText(), Double.parseDouble(text_weight.getText()), Double.parseDouble(text_volume.getText()),
