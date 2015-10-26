@@ -11,10 +11,13 @@ public class FinancePOServiceImpl implements FinancePOService{
 		this.type=type;
 	}
 	public FinancePO find(String id) throws RemoteException{
+		String[] institutionID={"1","2","3"};
+		String[][] personID={{"0","0"},{"0","0"}};
+		String[] vehicleID={"4","5","6"};
 		//type==0,Mysql
 		//type==1,txt
 		//type==2,ser
-		FinancePO finance=new FinancePO();
+		FinancePO finance=new FinancePO(institutionID, personID, vehicleID);
 		return finance;
 	}
 	

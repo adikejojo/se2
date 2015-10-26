@@ -1,6 +1,6 @@
 package UI.mainUI;
 
-import UI.userui.CourierRecieptUI;
+import UI.receiptUI.CourierRecieptUI;
 
 public class Main {
 	public static void main(String args[]){

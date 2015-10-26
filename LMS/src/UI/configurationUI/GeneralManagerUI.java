@@ -1,5 +1,5 @@
 package UI.configurationUI;
 
-public class empty {
+public class GeneralManagerUI {
 
 }

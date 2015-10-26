@@ -1,4 +1,4 @@
-package UI.userui;
+package UI.receiptUI;
 
 import java.awt.Choice;
 import java.awt.Font;
