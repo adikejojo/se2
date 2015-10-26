@@ -1,8 +1,4 @@
-/LMS/
-/UI/
-/businesslogic/
 /businesslogicservice/
+/businesslogic/
+/UI/
 /data/
-/dataservice/
-/po/
-/vo/

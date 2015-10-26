@@ -8,8 +8,8 @@ import po.senderPO;
 import UI.mainUI.expressType;
 import businesslogicservice.receiptblservice.SendReceiptService;
 import data.other.DataType;
-import data.receiptdata.ReceiptDataServiceImpl;
-import dataservice.receiptdataservice.ReceiptDataService;
+import data.receiptdata.ReceiptPOServiceImpl;
+import dataservice.receiptdataservice.ReceiptPOService;
 
 public class SendReceipt implements SendReceiptService{
 	String idNumber;
@@ -32,7 +32,7 @@ public class SendReceipt implements SendReceiptService{
 		receiver =new receiverPO(nameR,addressR,phoneR);
 		sender =new senderPO(nameS,addressS,phoneS);
 		sr =new SendReceiptPO("1234567890",sender,receiver,type,packFee,this.getPrice_stub());
-		ReceiptDataService data=new ReceiptDataServiceImpl(DataType.TXT);
+		ReceiptPOService data=new ReceiptPOServiceImpl(DataType.TXT);
 		try {
 			data.insert(sr);
 		} catch (RemoteException e) {
