@@ -2,36 +2,36 @@ package data.other;
 
 import java.rmi.RemoteException;
 
-import data.configurationdata.ConfigurationPOServiceImpl;
-import data.financedata.FinancePOServiceImpl;
-import data.receiptdata.ReceiptPOServiceImpl;
-import data.repertorydata.RepertoryPOServiceImpl;
-import data.userdata.UserPOServiceImpl;
-import dataservice.configurationdataservice.ConfigurationPOService;
-import dataservice.financedataservice.FinancePOService;
-import dataservice.receiptdataservice.ReceiptPOService;
-import dataservice.repertorydataservice.RepertoryPOService;
-import dataservice.userdataservice.UserPOService;
+import data.configurationdata.ConfigurationDataServiceImpl;
+import data.financedata.FinanceDataServiceImpl;
+import data.receiptdata.ReceiptDataServiceImpl;
+import data.repertorydata.RepertoryDataServiceImpl;
+import data.userdata.UserDataServiceImpl;
+import dataservice.configurationdataservice.ConfigurationDataService;
+import dataservice.financedataservice.FinanceDataService;
+import dataservice.receiptdataservice.ReceiptDataService;
+import dataservice.repertorydataservice.RepertoryDataService;
+import dataservice.userdataservice.UserDataService;
 
 public class DataFactory {
-	public UserPOService getUserDatabase (int type)throws RemoteException{
-		UserPOService data=new UserPOServiceImpl(type);
+	public UserDataService getUserDatabase (DataType type)throws RemoteException{
+		UserDataService data=new UserDataServiceImpl(type);
 		return data;
 	}
-	public ReceiptPOService getReceiptDatabase (DataType type)throws RemoteException{
-		ReceiptPOService data=new ReceiptPOServiceImpl(type);
+	public ReceiptDataService getReceiptDatabase (DataType type)throws RemoteException{
+		ReceiptDataService data=new ReceiptDataServiceImpl(type);
 		return data;
 	}
-	public RepertoryPOService getRepertoryDatabase (int type)throws RemoteException{
-		RepertoryPOService data=new RepertoryPOServiceImpl(type);
+	public RepertoryDataService getRepertoryDatabase (DataType type)throws RemoteException{
+		RepertoryDataService data=new RepertoryDataServiceImpl(type);
 		return data;
 	}
-	public FinancePOService getFinanceDatabase (int type)throws RemoteException{
-		FinancePOService data=new FinancePOServiceImpl(type);
+	public FinanceDataService getFinanceDatabase (DataType type)throws RemoteException{
+		FinanceDataService data=new FinanceDataServiceImpl(type);
 		return data;
 	}
-	public ConfigurationPOService getConfigurationDatabase (int type)throws RemoteException{
-		ConfigurationPOService data=new ConfigurationPOServiceImpl(type);
+	public ConfigurationDataService getConfigurationDatabase (DataType type)throws RemoteException{
+		ConfigurationDataService data=new ConfigurationDataServiceImpl(type);
 		return data;
 	}
 	

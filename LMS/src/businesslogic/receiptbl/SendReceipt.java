@@ -2,14 +2,14 @@ package businesslogic.receiptbl;
 
 import java.rmi.RemoteException;
 
-import UI.mainUI.expressType;
-import businesslogicservice.receiptblservice.SendReceiptService;
-import data.other.DataType;
-import data.receiptdata.ReceiptPOServiceImpl;
-import dataservice.receiptdataservice.ReceiptPOService;
 import po.SendReceiptPO;
 import po.receiverPO;
 import po.senderPO;
+import UI.mainUI.expressType;
+import businesslogicservice.receiptblservice.SendReceiptService;
+import data.other.DataType;
+import data.receiptdata.ReceiptDataServiceImpl;
+import dataservice.receiptdataservice.ReceiptDataService;
 
 public class SendReceipt implements SendReceiptService{
 	String idNumber;
@@ -32,7 +32,7 @@ public class SendReceipt implements SendReceiptService{
 		receiver =new receiverPO(nameR,addressR,phoneR);
 		sender =new senderPO(nameS,addressS,phoneS);
 		sr =new SendReceiptPO("1234567890",sender,receiver,type,packFee,this.getPrice_stub());
-		ReceiptPOService data=new ReceiptPOServiceImpl(DataType.TXT);
+		ReceiptDataService data=new ReceiptDataServiceImpl(DataType.TXT);
 		try {
 			data.insert(sr);
 		} catch (RemoteException e) {
