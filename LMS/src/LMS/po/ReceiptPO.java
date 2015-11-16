@@ -1,4 +1,4 @@
-package po;
+package LMS.po;
 
 import java.io.Serializable;
 
