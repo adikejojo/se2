@@ -23,7 +23,7 @@ public class SendReceiptPO extends ReceiptPO{
 	public SendReceiptPO(String ID, senderPO sender,
 			receiverPO receiver, expressType express_type, double packing_expense,
 			double toral_price) {
-		super();
+//		super();
 		this.ID = ID;
 		this.sender = sender;
 		this.receiver = receiver;

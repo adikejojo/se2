@@ -1,43 +1,53 @@
 package businesslogic.receiptbl;
 
+
+import po.AcceptReceiptPO;
+import po.SendReceiptPO;
+import po.receiverPO;
+import po.senderPO;
+
 public class infohelper {
-	void getSendReceiptInfo(){
+	public SendReceiptPO getSendReceiptInfo(SendReceiptPO sendReceipt){
+		receiverPO receiver = new receiverPO("zhangsan", "address1", "1382222222");
+		senderPO sender = new senderPO("lisi", "address2", "1393333333");
+		return new SendReceiptPO(sendReceipt.getOrder_barcode_number(),
+				sender, receiver, sendReceipt.getExpress_type(), 20.0, 50.0);
+	}
+	
+	public AcceptReceiptPO getAcceptReceiptInfo(AcceptReceiptPO acceptPO){
+		String[] state = null;
+		return new AcceptReceiptPO(acceptPO.getTransitCenter_number(), "11-11", "4321", "place",state);
+	}
+	
+	public void getCollectionReceiptInfo(){
 		
 	}
 	
-	void getAcceptReceiptInfo(){
+	public void getDeliveryReceiptInfo(){
 		
 	}
 	
-	void getCollectionReceiptInfo(){
+	public void getEarningReceiptInfo(){
 		
 	}
 	
-	void getDeliveryReceiptInfo(){
+	public void getloadingReceiptInfo(){
 		
 	}
 	
-	void getEarningReceiptInfo(){
+	public void gettransitReceiptInfo(){
 		
 	}
 	
-	void getloadingReceiptInfo(){
+	public void getPaymentReceiptInfo(){
 		
 	}
 	
-	void gettransitReceiptInfo(){
+	public void getImportReceiptInfo(){
 		
 	}
 	
-	void getPaymentReceiptInfo(){
-		
-	}
-	
-	void getImportReceiptInfo(){
-		
-	}
-	
-	void getExportReceiptInfo(){
+	public void getExportReceiptInfo(){
 		
 	}
 
