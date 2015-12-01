@@ -95,7 +95,18 @@ public class MyTable extends JPanel{
 		if (importListModel.getRowCount() > 0) {
 			 for (int i = importListModel.getRowCount() - 1; i > -1; i--) {
 			  importListModel.removeRow(i);
+//			  System.out.println(i);
 			 }
 			}
+	}
+	public ListSelectionModel getSelectedmodel(){
+		
+		return importListTable.getSelectionModel();
+	}
+	public String getValue(int row, int column){
+		return String.valueOf(importListTable.getValueAt(row, column));
+	}
+	public JTable getTable(){
+		return importListTable;
 	}
 }
